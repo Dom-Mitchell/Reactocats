@@ -1,19 +1,20 @@
-# react-project-template
+# Reactodex
 
 ## Assignment
 
-The goal of this assignment was to create a basic webpage to act as a template for all future html/react projects.
+The goal of this assignment was to recreate Github's Octodex page displayed below, using React.
 
-![image of My webpage](././images/mypage.png)
+Page 1
+![first image of Octodex](././images/part1.png)
 
-The above is a screen capture of the template that I created.
+Page 2
 
-![image of My webpage](././icons/current/dai5.svg)
+![second image of Octodex](././images/part2.png)
 
-The above is a custom favicon that I made for the template, to be used in all future html/react projects.
+The page was so large that it was split into 2 images, to view the page better please follow the link below.
 
-<br/>
+https://octodex.github.com/
 
-A link to the webpage that I made can be found in the About section of this repository or below.
+A link to the Octodex recreation that I did can be found in the About section of this repository or below.
 
-https://react-template-dommitchell.netlify.app/
+https://reactodex-dommitchell.netlify.app/

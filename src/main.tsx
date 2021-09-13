@@ -1,11 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
-import { App } from './App'
+// import { OctoApp } from './App'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <React.StrictMode>{/* <OctoApp /> */}</React.StrictMode>,
   document.getElementById('root')
 )
