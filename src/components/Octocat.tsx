@@ -1,39 +1,35 @@
-import React, { Component } from 'react'
-import { Author } from './Author'
+import React from 'react'
+import { Author, AuthorType } from './Author'
+// import Reactocats from './reactodex.json'
 
-interface ICatProps {
-  author?: Author
-  link?: string
-  image?: string
-  number?: number
-  name?: string
+type OctocatProps = {
+  number: number
+  image: string
+  name: string
+  link: string
+  authors: AuthorType[]
 }
+export function Octocat(props: OctocatProps) {
+  return (
+    <div>
+      <figure>
+        <a href={props.link}>
+          <img src={props.image} alt="" />
+        </a>
+      </figure>
 
-export class Octocat extends Component<ICatProps> {
-  convertAuthorObjectToComponent(author: { link: string; image: string }) {
-    return <Author link={author.link} image={author.image} />
-  }
-  render() {
-    const authorsFromData = this.props.author.map(
-      this.convertAuthorObjectToComponent
-    )
-    return (
-      <div>
-        <figure>
-          <a href={this.props.link}>
-            <img src={this.props.image} alt="" />
-          </a>
-        </figure>
-
-        <div className="item-footer">
-          <div>
-            <span>#{this.props.number}</span>
-            <a href="#">{this.props.name}</a>
-          </div>
-
-          <div className="author-icon-list">{authorsFromData}</div>
+      <div className="item-footer">
+        <div>
+          <span>#{props.number}</span>
+          <a href="#">{props.name}</a>
         </div>
+
+        {props.authors.map((author, index) => (
+          <div key={index} className="author-icon-list">
+            <Author link={author.link} image={author.image} />
+          </div>
+        ))}
       </div>
-    )
-  }
+    </div>
+  )
 }

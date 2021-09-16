@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-interface IAuthorProps {
-  link?: string
-  image?: string
+export type AuthorType = {
+  link: string
+  image: string
 }
 
-export class Author extends Component<IAuthorProps> {
-  render() {
-    return (
-      <a href={this.props.link}>
-        <img src={this.props.image} alt="" />
-      </a>
-    )
-  }
+export function Author(props: AuthorType) {
+  return (
+    <a href={props.link}>
+      <img src={props.image} alt="" />
+    </a>
+  )
 }
