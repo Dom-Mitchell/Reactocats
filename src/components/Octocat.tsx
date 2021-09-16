@@ -24,11 +24,13 @@ export function Octocat(props: OctocatProps) {
           <a href="#">{props.name}</a>
         </div>
 
-        {props.authors.map((author, index) => (
-          <div key={index} className="author-icon-list">
-            <Author link={author.link} image={author.image} />
-          </div>
-        ))}
+        <div className="author-icon-list">
+          {props.authors.map((author, index) => (
+            <div key={index} className="container">
+              <Author link={author.link} image={author.image} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
